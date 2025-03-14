@@ -14,7 +14,7 @@ import { RealisationsComponent } from "./realisations/realisations.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'portfolio-frontend';
+  title = 'Abdul Idriss';
 
   isMenuOpen = false;
   isScrolled = false;
