@@ -1,0 +1,69 @@
+<div class="bg-gray-900 text-white min-h-screen p-4 md:p-8">
+        <div class="max-w-6xl mx-auto">
+
+          <div class="flex flex-col items-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Projects</h1>
+            <div class="h-12 flex flex-col items-center">
+              <div class="h-8 w-0.5 bg-red-500"></div>
+              <div class="h-1.5 w-1.5 rounded-full bg-red-500"></div>
+            </div>
+          </div>
+          
+          <div class="space-y-20">
+            @for (project of projects; track project.id; let i = $index) {
+              <div 
+                class="flex flex-col gap-8 items-center"
+                [ngClass]="{'md:flex-row-reverse': i % 2 === 1, 'md:flex-row': i % 2 === 0}">
+                
+
+                <div class="w-full md:w-1/2">
+                  <img 
+                    [src]="project.image" 
+                    [alt]="project.title" 
+                    class="w-full rounded-md shadow-lg"
+                  />
+                </div>
+                
+
+                <div class="w-full md:w-1/2">
+                  <h2 class="text-2xl md:text-3xl font-bold mb-4">{{ project.title }}</h2>
+                  
+
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    @for (tech of project.technologies; track tech) {
+                      <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">
+                        {{ tech }}
+                      </span>
+                    }
+                  </div>
+                  
+
+                  <p class="text-gray-300 mb-6">{{ project.description }}</p>
+                  
+
+                  <div class="flex flex-wrap gap-4">
+                    <a 
+                      [href]="project.githubUrl" 
+                      target="_blank"
+                      class="px-6 py-2 bg-red-500 hover:bg-red-600 transition-colors rounded-md font-medium"
+                    >
+                      View Github
+                    </a>
+                    <a 
+                      [href]="project.projectUrl"
+                      target="_blank" 
+                      class="px-6 py-2 border border-white hover:bg-gray-800 transition-colors rounded-md font-medium flex items-center gap-1"
+                    >
+                      View project
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+</div>
+      

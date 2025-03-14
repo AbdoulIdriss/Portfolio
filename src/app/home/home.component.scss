@@ -1,0 +1,31 @@
+fa-icon {
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+      &.fa-facebook { color: #1877f2; }
+      &.fa-instagram { color: #e4405f; }
+      &.fa-x-twitter { color: #000000; }
+      &.fa-linkedin { color: #0077b5; }
+      &.fa-github { color: #333; }
+    }
+}
+
+.typewriter-text {
+    display: inline-block;
+    border-right: 0.15em solid #000; /* The cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  /* The typing cursor animation */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #000 }
+}
+  
+  
