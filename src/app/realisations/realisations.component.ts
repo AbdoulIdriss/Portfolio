@@ -8,7 +8,7 @@ interface Project {
   description: string;
   technologies: string[];
   githubUrl: string;
-  projectUrl: string;
+  projectUrl?: string;
   image: string;
 }
 
@@ -42,11 +42,19 @@ export class RealisationsComponent{
     {
       id: 3,
       title: 'Les Paniers De Bintou',
-      description: 'A showcase website for Les paniers de bintou company',
+      description: 'A showcase website for Les paniers de Bintou company',
       technologies: ['Angular' , 'Tailwind' , 'Express' , 'MongoDB'],
       githubUrl: 'https://github.com/AbdoulIdriss/Les-paniers-de-bintou-frontend-',
       projectUrl: '',
       image:'images/lpd.jpg'
+    },
+    {
+      id: 4,
+      title: 'Employee Mangement System',
+      description: 'A Backend API build to manage Employees of a company ',
+      technologies: ['Typescript' , 'Express' , 'MongoDB'],
+      githubUrl: 'https://github.com/AbdoulIdriss/employeeMS-backend',
+      image:'https://storyset.com/illustration/company/cuate#2E1C33FF&hide=&hide=complete'
     }
   ];
 
