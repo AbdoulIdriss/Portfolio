@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule ,ReactiveFormsModule, Validators } from '@angular/forms';
+import {ContactService} from '../Services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,7 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private formBuilder : FormBuilder,
+    private contactService : ContactService
   ) {}
 
   ngOnInit(): void {
@@ -32,11 +34,8 @@ export class ContactComponent implements OnInit {
 
   onSubmit(){
     if (this.contactForm.valid ) {
-      const formData = {
-        fullname: this.contactForm.get('fullname')?.value,
-        email: this.contactForm.get('email')?.value,
-        message: this.contactForm.get('message')?.value
-      }      
+      this.contactService.create(this.contactForm.value)
+      this.contactForm.reset()
     }
 
   }

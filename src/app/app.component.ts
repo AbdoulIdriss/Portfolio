@@ -1,15 +1,15 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { initFlowbite } from 'flowbite';
 import { HomeComponent } from './home/home.component';
 import { OurSkillsComponent } from './our-skills/our-skills.component';
 import { CommonModule } from '@angular/common';
 import { RealisationsComponent } from "./realisations/realisations.component";
+import { ContactComponent } from "./contact/contact.component";
 
 @Component({
   selector: 'app-root',
-  imports: [FontAwesomeModule, HomeComponent, OurSkillsComponent, CommonModule, RealisationsComponent],
+  imports: [FontAwesomeModule, HomeComponent, OurSkillsComponent, CommonModule, RealisationsComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

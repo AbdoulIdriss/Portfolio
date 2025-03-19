@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  private backendUrl = 'http://127.0.0.1:5000/contact'
+  private backendUrl = 'https://pythonportfolio.netlify.app/contact'
 
-  constructor(  ) { }
+  constructor( private http: HttpClient ) { }
 
-  // create(contact:{ fullname: string; email: string; message: string }): Observable<any> {
-  //   return this.http.post<any>(this.backendUrl + '/create' , contact , {
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  // }
-
+  create(contact:{ fullname: string; email: string; message: string }): Observable<any> {
+    return this.http.post<any>(this.backendUrl + '/create' , contact , {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+  }
 }

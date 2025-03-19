@@ -54,7 +54,7 @@ export class RealisationsComponent{
       description: 'A Backend API build to manage Employees of a company ',
       technologies: ['Typescript' , 'Express' , 'MongoDB'],
       githubUrl: 'https://github.com/AbdoulIdriss/employeeMS-backend',
-      image:'https://storyset.com/illustration/company/cuate#2E1C33FF&hide=&hide=complete'
+      image:'images/Shared-workspace-amico.svg'
     }
   ];
 
