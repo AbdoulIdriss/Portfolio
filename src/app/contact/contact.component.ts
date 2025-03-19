@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule ,ReactiveFormsModule, Validators } from '@angular/forms';
 import {ContactService} from '../Services/contact.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
