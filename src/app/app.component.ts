@@ -9,7 +9,7 @@ import { ContactComponent } from "./contact/contact.component";
 
 @Component({
   selector: 'app-root',
-  imports: [FontAwesomeModule, HomeComponent, OurSkillsComponent, CommonModule, RealisationsComponent, ContactComponent],
+  imports: [FontAwesomeModule, HomeComponent, OurSkillsComponent, CommonModule, RealisationsComponent, ContactComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -35,6 +35,7 @@ export class ContactComponent implements OnInit {
   onSubmit(){
     if (this.contactForm.valid ) {
       this.contactService.create(this.contactForm.value)
+      alert('Email send')
       this.contactForm.reset()
     }
 
